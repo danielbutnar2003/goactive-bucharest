@@ -342,9 +342,9 @@ a { color: inherit; }
 
 /* ---------- Stats ---------- */
 .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 2px solid currentColor; }
-.stat { padding: 28px 24px 0 0; }
+.stat { padding: 28px 24px 0 0; container-type: inline-size; }
 .stat + .stat { padding-left: 24px; border-left: 1px solid var(--line); }
-.stat__value { display: block; font-family: var(--display); font-weight: 900; font-stretch: 115%; font-size: clamp(2.6rem, 5.4vw, 5.4rem); line-height: .9; letter-spacing: -.035em; white-space: nowrap; }
+.stat__value { display: block; font-family: var(--display); font-weight: 900; font-stretch: 115%; font-size: min(clamp(2.6rem, 5.4vw, 5.4rem), 20cqi); /* scales with its column: the widest value, "€26.2bn", is about 4.7em */ line-height: .9; letter-spacing: -.035em; white-space: nowrap; }
 .stat__label { display: block; margin-top: 14px; font-size: .95rem; color: var(--muted); max-width: 24ch; }
 .source { margin-top: 36px; font-size: .8rem; color: var(--muted); }
 
