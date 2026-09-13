@@ -19,6 +19,7 @@ Live at **https://goactivebucharest.me** (once the domain is connected, see belo
 | `assets/css/` | `style.css` (design system) and `fonts.css` (self-hosted fonts) |
 | `assets/js/main.js` | Menu, animations and form handling. **Settings live at the top.** |
 | `assets/logo/` | Logo files (SVG and PNG) |
+| `CNAME` | Custom domain for GitHub Pages (goactivebucharest.me) |
 | `assets/img/` | Team photos: add `daniel.jpg`, `vlad.jpg`, `bianca.jpg` (portrait, about 4:5) |
 
 ## Preview locally
@@ -40,9 +41,13 @@ npx serve .
 
 1. Push this folder to `github.com/danielbutnar2003/goactive-bucharest` (branch `main`).
 2. Repository **Settings → Pages → Build and deployment**: Source "Deploy from a branch", branch `main`, folder `/ (root)`.
-3. Until goactivebucharest.me is registered, the site is live at https://danielbutnar2003.github.io/goactive-bucharest/. After adding the DNS records below, set the custom domain under **Settings → Pages → Custom domain** (GitHub then adds a `CNAME` file to the repository).
+3. The custom domain **goactivebucharest.me** is connected through the `CNAME` file. Keep that file in the repository.
 
-## Free domain with the GitHub Student Developer Pack
+## Domain
+
+**goactivebucharest.me** was registered on 13 September 2026 through Namecheap (GitHub Student Developer Pack). It expires on **13 September 2027**: renew it in your Namecheap account before then, or the website goes offline.
+
+### How it was set up (for reference)
 
 1. Apply at **https://education.github.com/pack** with your university email or proof of enrollment. Approval can take a few days.
 2. Once approved, open the pack's **Namecheap** offer (free `.me` domain for one year) and register **goactivebucharest.me**.
