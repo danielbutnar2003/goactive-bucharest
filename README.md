@@ -79,3 +79,27 @@ git add .
 git commit -m "Update content"
 git push
 ```
+
+## Security and privacy measures
+
+| Measure | Where |
+| --- | --- |
+| HTTPS only (switch on **Enforce HTTPS** in Settings, Pages once the certificate is issued) | GitHub Pages |
+| Content Security Policy: scripts, styles and fonts only from this site, forms only to formsubmit.co | meta tag in every page |
+| Referrer policy strict-origin-when-cross-origin | meta tag in every page |
+| No cookies, no analytics, no third-party scripts, self-hosted fonts | whole site |
+| Forms: hidden spam trap, POST fallback without JavaScript (answers never appear in URLs) | ideas.html, contact.html |
+| Security contact file (renew the Expires date before 13 September 2027) | .well-known/security.txt |
+
+**If you add a new service** (analytics, maps, embedded video), add its domain to the Content Security Policy in every page and update the Privacy and Cookie policies first.
+
+**If you edit the one-line inline script** in the page head, its sha256 hash in the Content Security Policy must be updated too, or the animations stop working.
+
+**GitHub Pages limits:** custom HTTP headers cannot be set, so frame-ancestors and Permissions-Policy are not available. This is acceptable for a static site without logins. GitHub adds HSTS automatically when HTTPS is enforced.
+
+### Account security checklist
+
+- [ ] Two-factor authentication on GitHub (danielbutnar2003), Gmail and Namecheap
+- [ ] Verify goactivebucharest.me in GitHub profile Settings, Pages (protects against domain takeover)
+- [ ] Namecheap: turn on auto-renew for goactivebucharest.me (transfer lock is already active)
+- [ ] Keep only core team members as collaborators on the repository

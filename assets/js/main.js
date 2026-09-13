@@ -143,6 +143,29 @@
     update();
   });
 
+  /* ---------- Optional team photos (no inline handlers, CSP-safe) ---------- */
+  document.querySelectorAll("img[data-optional-photo]").forEach((img) => {
+    const show = () => img.classList.add("is-loaded");
+    const drop = () => img.remove();
+    if (img.complete) {
+      if (img.naturalWidth > 0) show(); else drop();
+    } else {
+      img.addEventListener("load", show, { once: true });
+      img.addEventListener("error", drop, { once: true });
+    }
+  });
+
+  /* ---------- Pause animations (WCAG 2.2.2) ---------- */
+  document.querySelectorAll("[data-motion-toggle]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const paused = document.documentElement.classList.toggle("motion-paused");
+      document.querySelectorAll("[data-motion-toggle]").forEach((b) => {
+        b.setAttribute("aria-pressed", String(paused));
+        b.textContent = paused ? "Play animations" : "Pause animations";
+      });
+    });
+  });
+
   /* ---------- Forms ---------- */
   document.querySelectorAll("form[data-form]").forEach((form) => {
     const wrap = form.closest(".form-wrap");
@@ -221,7 +244,7 @@
           .join("\n");
         const mailto = `mailto:${CONFIG.email}?subject=${encodeURIComponent(data._subject)}&body=${encodeURIComponent(text.slice(0, 1800))}`;
         status.className = "form-status form-status--err is-visible";
-        status.innerHTML = "We couldn’t send this automatically. ";
+        status.textContent = "We couldn’t send this automatically. ";
         const link = document.createElement("a");
         link.href = mailto;
         link.textContent = "Send it by email instead";
