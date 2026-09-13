@@ -1,0 +1,77 @@
+# GoActive Bucharest — website
+
+Static website for GoActive Bucharest, an informal youth group building inclusive Erasmus+ youth exchanges.
+Plain HTML, CSS and JavaScript: no build step, no dependencies, no cookies.
+
+Live at **https://goactivebucharest.me** (once the domain is connected, see below).
+
+## Structure
+
+| Path | What it is |
+| --- | --- |
+| `index.html` | Our mission (home page) |
+| `ideas.html` | "Tell us your ideas" platform with form |
+| `contact.html` | Contact details and partnership proposal form |
+| `daniel-butnar.html`, `vlad-rusu.html`, `bianca-constantin.html` | Team profiles |
+| `brand.html` | Logo and brand guidelines |
+| `privacy.html`, `cookies.html` | GDPR privacy policy and cookie policy |
+| `404.html` | "Page not found" page |
+| `assets/css/` | `style.css` (design system) and `fonts.css` (self-hosted fonts) |
+| `assets/js/main.js` | Menu, animations and form handling. **Settings live at the top.** |
+| `assets/logo/` | Logo files (SVG and PNG) |
+| `assets/img/` | Team photos: add `daniel.jpg`, `vlad.jpg`, `bianca.jpg` (portrait, about 4:5) |
+| `CNAME` | Custom domain for GitHub Pages |
+
+## Preview locally
+
+Open `index.html` in a browser, or run a small local server from this folder:
+
+```bash
+npx serve .
+```
+
+## Before going live
+
+- [ ] Add the Instagram and Facebook links in `CONFIG` at the top of `assets/js/main.js`.
+- [ ] Add team photos to `assets/img/`.
+- [ ] **Activate the forms:** submit one test from the live site. FormSubmit emails an activation link to daniel.butnar@gmail.com. Click it once, and all later submissions arrive normally.
+- [ ] Have the Privacy and Cookie policies reviewed by someone with legal knowledge, and update them if you add any new service (for example, analytics).
+
+## Hosting on GitHub Pages
+
+1. Push this folder to `github.com/danielbutnar2003/goactive-bucharest` (branch `main`).
+2. Repository **Settings → Pages → Build and deployment**: Source "Deploy from a branch", branch `main`, folder `/ (root)`.
+3. The `CNAME` file sets the custom domain `goactivebucharest.me` automatically.
+
+## Free domain with the GitHub Student Developer Pack
+
+1. Apply at **https://education.github.com/pack** with your university email or proof of enrollment. Approval can take a few days.
+2. Once approved, open the pack's **Namecheap** offer (free `.me` domain for one year) and register **goactivebucharest.me**.
+   - Turn on the free WHOIS privacy protection.
+   - Note the renewal price after the first year, and set a reminder to renew.
+3. In Namecheap go to **Domain List → Manage → Advanced DNS**, delete the default parking records, then add:
+
+   | Type | Host | Value |
+   | --- | --- | --- |
+   | A Record | `@` | `185.199.108.153` |
+   | A Record | `@` | `185.199.109.153` |
+   | A Record | `@` | `185.199.110.153` |
+   | A Record | `@` | `185.199.111.153` |
+   | AAAA Record | `@` | `2606:50c0:8000::153` |
+   | AAAA Record | `@` | `2606:50c0:8001::153` |
+   | AAAA Record | `@` | `2606:50c0:8002::153` |
+   | AAAA Record | `@` | `2606:50c0:8003::153` |
+   | CNAME Record | `www` | `danielbutnar2003.github.io.` |
+
+4. In the repository's **Settings → Pages**, confirm the custom domain shows `goactivebucharest.me`. When the DNS check passes (from minutes up to 24 hours), tick **Enforce HTTPS**.
+5. Recommended for security: in your **GitHub profile Settings → Pages → Add a domain**, verify `goactivebucharest.me` with the TXT record GitHub gives you. This stops anyone else from using your domain on GitHub.
+
+## Updating the site
+
+Edit the files, then commit and push. GitHub Pages republishes within about a minute.
+
+```bash
+git add .
+git commit -m "Update content"
+git push
+```

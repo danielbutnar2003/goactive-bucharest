@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 1 64 64" width="64" height="64" role="img" aria-label="GoActive Bucharest">
+<title>GoActive Bucharest</title>
+<mask id="ga-iw" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="66"><rect width="64" height="66" fill="#fff"/><path d="M21 39L41 19M24 19H41V36" stroke="#000" fill="none" stroke-width="7" stroke-linecap="butt" stroke-linejoin="miter"/></mask><path d="M20 4H44A16 16 0 0 1 60 20V36A16 16 0 0 1 44 52H18L4 62V20A16 16 0 0 1 20 4Z" fill="#FFFFFF" mask="url(#ga-iw)"/>
+</svg>

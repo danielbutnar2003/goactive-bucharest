@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Logo &amp; Brand — GoActive Bucharest</title>
+<meta name="description" content="The GoActive Bucharest logo: concept, variants, colours and usage guidelines.">
+<meta name="theme-color" content="#0A0A10">
+<link rel="canonical" href="https://goactivebucharest.me/brand.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GoActive Bucharest">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Logo &amp; Brand — GoActive Bucharest">
+<meta property="og:description" content="The GoActive Bucharest logo: concept, variants, colours and usage guidelines.">
+<meta property="og:url" content="https://goactivebucharest.me/brand.html">
+<meta property="og:image" content="https://goactivebucharest.me/assets/logo/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="GoActive Bucharest — Every voice gets the mic.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/logo/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="assets/js/main.js" defer></script>
+<style>
+  .logo-stage { margin-top: clamp(40px, 5vw, 64px); padding: clamp(40px, 8vw, 120px) clamp(24px, 6vw, 90px); border: 1px solid var(--line-d); border-radius: var(--r-lg); display: grid; place-items: center; background: rgba(243, 240, 231, .025); }
+  .logo-stage img { width: min(100%, 780px); height: auto; }
+
+  .concept { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: clamp(40px, 6vw, 100px); align-items: center; }
+  .concept__art { position: relative; aspect-ratio: 1; border-radius: var(--r-lg); background: var(--ink); display: grid; place-items: center; overflow: hidden; isolation: isolate; }
+  .concept__art::before { content: ""; position: absolute; inset: 0; z-index: -1; background-image: linear-gradient(var(--line-d) 1px, transparent 1px), linear-gradient(90deg, var(--line-d) 1px, transparent 1px); background-size: 8.33% 8.33%; opacity: .6; }
+  .concept__art img { width: 50%; height: auto; }
+  .annot { position: absolute; display: flex; align-items: center; gap: 10px; font-size: .74rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--paper); }
+  .annot::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 0 5px rgba(212, 255, 63, .18); }
+  .annot--voice { top: 13%; left: 9%; }
+  .annot--go { top: 13%; right: 9%; }
+  .annot--roots { bottom: 11%; left: 9%; }
+  .meaning { list-style: none; margin: 36px 0 0; padding: 0; }
+  .meaning li { display: grid; grid-template-columns: 58px minmax(0, 1fr); gap: 20px; padding: 22px 0; border-top: 1px solid var(--line); }
+  .meaning .sym { width: 58px; height: 58px; border-radius: 16px; background: var(--ink); color: var(--lime); display: grid; place-items: center; }
+  .meaning h3 { margin: 4px 0 6px; font-family: var(--display); font-weight: 900; font-stretch: 110%; text-transform: uppercase; font-size: 1.35rem; line-height: 1; }
+  .meaning p { margin: 0; color: var(--muted); }
+
+  .variants { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .variant { border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--line); background: #fff; }
+  .variant__stage { aspect-ratio: 16 / 9; display: grid; place-items: center; padding: 10% 12%; }
+  .variant__stage img { width: 100%; height: auto; }
+  .variant__stage--stacked img { width: auto; height: 78%; }
+  .variant__bar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 16px; padding: 16px 22px; font-size: .9rem; }
+  .variant__bar span { color: var(--muted); }
+  .variant__bar a { font-weight: 600; text-decoration: none; color: var(--blue); white-space: nowrap; }
+  .variant__bar a:hover { text-decoration: underline; }
+  .bg-ink { background: var(--ink); } .bg-paper { background: var(--paper); } .bg-lime { background: var(--lime); }
+  .bg-blue { background: var(--blue); } .bg-white { background: #fff; } .bg-coral { background: var(--coral); }
+
+  .sizes { display: flex; flex-wrap: wrap; align-items: flex-end; gap: clamp(24px, 4vw, 56px); padding: clamp(28px, 4vw, 48px); border-radius: var(--r-lg); background: var(--paper-2); }
+  .sizes figure { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 14px; font-size: .8rem; font-weight: 600; color: var(--muted); }
+  .sizes .app { border-radius: 22%; overflow: hidden; box-shadow: 0 20px 40px -18px rgba(10, 10, 16, .45); }
+
+  .clear { display: grid; place-items: center; padding: clamp(28px, 5vw, 72px) 16px; border-radius: var(--r-lg); background: var(--paper-2); }
+  .clear__box { --lw: min(62vw, 440px); position: relative; padding: calc(var(--lw) * .0928); outline: 1.5px dashed var(--blue); }
+  .clear__box img { display: block; width: var(--lw); height: auto; outline: 1px solid rgba(43, 54, 255, .35); }
+  .clear__x { position: absolute; top: 0; left: 0; width: calc(var(--lw) * .0928); aspect-ratio: 1; background: rgba(43, 54, 255, .16); color: var(--blue); display: grid; place-items: center; font-weight: 700; font-size: .8rem; }
+  .clear__x--br { top: auto; left: auto; bottom: 0; right: 0; }
+
+  .swatches { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
+  .swatch { border-radius: var(--r); overflow: hidden; border: 1px solid var(--line); background: #fff; }
+  .swatch__c { aspect-ratio: 1 / 1.05; padding: 18px; display: flex; align-items: flex-end; font-family: var(--display); font-weight: 900; font-stretch: 112%; text-transform: uppercase; font-size: 1.35rem; line-height: 1; }
+  .swatch__m { padding: 14px 18px; font-size: .84rem; display: grid; gap: 3px; }
+  .swatch__m code { font-family: ui-monospace, Consolas, monospace; color: var(--muted); }
+
+  .donts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+  .dont { border-radius: var(--r); overflow: hidden; background: #fff; border: 1px solid var(--line); }
+  .dont__stage { position: relative; aspect-ratio: 4 / 3; display: grid; place-items: center; padding: 12%; overflow: hidden; }
+  .dont__stage img { width: 100%; height: auto; }
+  .dont__stage::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top right, transparent calc(50% - 1.5px), var(--coral) calc(50% - 1.5px), var(--coral) calc(50% + 1.5px), transparent calc(50% + 1.5px)); }
+  .dont p { margin: 0; padding: 14px 18px; font-size: .9rem; font-weight: 500; }
+  .dont p::before { content: "✕"; color: var(--coral); font-weight: 700; margin-right: 8px; }
+
+  .files { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--fg); }
+  .files li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--line); }
+  .files strong { display: block; font-weight: 600; }
+  .files span { font-size: .88rem; color: var(--muted); }
+
+  @media (max-width: 1000px) { .swatches { grid-template-columns: repeat(3, minmax(0, 1fr)); } .donts { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 860px) { .concept, .variants { grid-template-columns: minmax(0, 1fr); } }
+  @media (max-width: 600px) { .swatches { grid-template-columns: repeat(2, minmax(0, 1fr)); } .files li { grid-template-columns: minmax(0, 1fr); gap: 10px; } .files .btn { justify-self: start; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header__inner">
+    <a class="logo" href="index.html" aria-label="GoActive Bucharest home">
+      <img class="logo__img" src="assets/logo/logo-horizontal-dark.svg" alt="GoActive Bucharest" width="474" height="72">
+    </a>
+    <nav class="nav" aria-label="Main">
+      <ul class="nav__list">
+        <li><a href="index.html">Our mission</a></li>
+        <li><a href="ideas.html">Tell us your ideas</a></li>
+        <li class="nav__drop">
+          <button class="nav__drop-btn" type="button" aria-expanded="false">Team <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="m2 3.5 3 3 3-3" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <ul class="nav__sub">
+            <li><a href="daniel-butnar.html">Daniel Butnar<small>Founder &amp; Group Leader</small></a></li>
+            <li><a href="vlad-rusu.html">Vlad Rusu<small>Project Manager</small></a></li>
+            <li><a href="bianca-constantin.html">Bianca Constantin<small>Core Team</small></a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--sm header__cta" href="ideas.html">Share your idea <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 11 11 3M5 3h6v6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu">
+  <ul>
+    <li><a href="index.html">Our mission</a></li>
+    <li><a href="ideas.html">Your ideas</a></li>
+    <li><a href="daniel-butnar.html">Team</a>
+      <div class="mobile-menu__team"><a href="daniel-butnar.html">Daniel Butnar</a><a href="vlad-rusu.html">Vlad Rusu</a><a href="bianca-constantin.html">Bianca Constantin</a></div>
+    </li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a class="btn" href="ideas.html">Share your idea <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 11 11 3M5 3h6v6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+
+<main id="main">
+
+  <section class="hero hero--page">
+    <div class="orb" aria-hidden="true"></div>
+    <div class="wrap hero__inner">
+      <p class="kicker">Brand identity · Logo</p>
+      <h1 class="display h-xxl hero__title">
+        <span class="line"><span style="--i:0">The voice</span></span>
+        <span class="line"><span style="--i:1" class="hl">arrow.</span></span>
+      </h1>
+      <p class="lead">A speech bubble that refuses to stay still. Our logo puts the whole mission into one mark: <strong>young people speaking up — and going places.</strong></p>
+      <div class="logo-stage">
+        <img src="assets/logo/logo-horizontal-dark.svg" alt="GoActive Bucharest logo" width="474" height="72">
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper">
+    <div class="wrap concept">
+      <div class="concept__art reveal">
+        <img src="assets/logo/icon.svg" alt="GoActive Bucharest icon: a speech bubble with an arrow pointing up and to the right" width="64" height="64">
+        <span class="annot annot--voice">Voice</span>
+        <span class="annot annot--go">Go</span>
+        <span class="annot annot--roots">Roots</span>
+      </div>
+      <div class="reveal" style="--d:100ms">
+        <p class="label"><span class="n">01</span> The concept</p>
+        <h2 class="display h-l" style="margin-top:20px">Speak up. Go further.</h2>
+        <ul class="meaning">
+          <li>
+            <span class="sym"><svg width="28" height="28" viewBox="0 0 64 66" aria-hidden="true"><path d="M20 4H44A16 16 0 0 1 60 20V36A16 16 0 0 1 44 52H18L4 62V20A16 16 0 0 1 20 4Z" fill="none" stroke="currentColor" stroke-width="6"/></svg></span>
+            <div><h3>The bubble — voice</h3><p>Every project starts with something someone says. The bubble is the platform we give young people to speak.</p></div>
+          </li>
+          <li>
+            <span class="sym"><svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><path d="M14 50L46 18M20 18H46V44" fill="none" stroke="currentColor" stroke-width="9"/></svg></span>
+            <div><h3>The arrow — go</h3><p>Pointing up and out: moving forward, crossing borders, taking the next step. The spirit of every Erasmus+ exchange.</p></div>
+          </li>
+          <li>
+            <span class="sym"><svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><path d="M40 14L12 52M12 30V52H34" fill="none" stroke="currentColor" stroke-width="9"/></svg></span>
+            <div><h3>The tail — roots</h3><p>The bubble’s tail points down and back, toward home. The arrow points the other way. You always leave from somewhere — for us, that’s Bucharest.</p></div>
+          </li>
+          <li>
+            <span class="sym" style="font-family:var(--display);font-weight:900;font-stretch:120%;font-size:1.3rem">G</span>
+            <div><h3>The lettering — bold &amp; open</h3><p>Custom wide, heavy letters whose rounded shapes echo the bubble. BUCHAREST is drawn light and spaced wide: our home base, with room to breathe.</p></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="label reveal"><span class="n">02</span> Variants</p>
+        <h2 class="display h-l reveal">One mark, every background.</h2>
+        <p class="lead muted reveal">Use the dark version on dark or saturated colours, the light version on light backgrounds, and the single-colour versions when only one colour is possible.</p>
+      </div>
+      <div class="variants">
+        <figure class="variant reveal" style="margin:0">
+          <div class="variant__stage bg-ink"><img src="assets/logo/logo-horizontal-dark.svg" alt="Logo on dark background" width="474" height="72"></div>
+          <figcaption class="variant__bar"><strong>Primary · on dark</strong><a href="assets/logo/logo-horizontal-dark.svg" download>Download SVG ↓</a></figcaption>
+        </figure>
+        <figure class="variant reveal" style="margin:0;--d:80ms">
+          <div class="variant__stage bg-paper"><img src="assets/logo/logo-horizontal-light.svg" alt="Logo on light background" width="474" height="72"></div>
+          <figcaption class="variant__bar"><strong>Primary · on light</strong><a href="assets/logo/logo-horizontal-light.svg" download>Download SVG ↓</a></figcaption>
+        </figure>
+        <figure class="variant reveal" style="margin:0">
+          <div class="variant__stage bg-blue"><img src="assets/logo/logo-horizontal-dark.svg" alt="Logo on blue background" width="474" height="72"></div>
+          <figcaption class="variant__bar"><strong>On brand blue</strong><a href="assets/logo/logo-horizontal-dark.svg" download>Download SVG ↓</a></figcaption>
+        </figure>
+        <figure class="variant reveal" style="margin:0;--d:80ms">
+          <div class="variant__stage bg-lime"><img src="assets/logo/logo-horizontal-black.svg" alt="Single-colour black logo on lime background" width="474" height="72"></div>
+          <figcaption class="variant__bar"><strong>Single colour · black</strong><a href="assets/logo/logo-horizontal-black.svg" download>Download SVG ↓</a></figcaption>
+        </figure>
+        <figure class="variant reveal" style="margin:0">
+          <div class="variant__stage variant__stage--stacked bg-ink"><img src="assets/logo/logo-stacked-dark.svg" alt="Stacked logo on dark background" width="382" height="214"></div>
+          <figcaption class="variant__bar"><strong>Stacked · on dark</strong><a href="assets/logo/logo-stacked-dark.svg" download>Download SVG ↓</a></figcaption>
+        </figure>
+        <figure class="variant reveal" style="margin:0;--d:80ms">
+          <div class="variant__stage variant__stage--stacked bg-coral"><img src="assets/logo/logo-stacked-white.svg" alt="Stacked single-colour white logo on coral background" width="382" height="214"></div>
+          <figcaption class="variant__bar"><strong>Stacked · single colour white</strong><a href="assets/logo/logo-stacked-white.svg" download>Download SVG ↓</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="label reveal"><span class="n">03</span> The icon</p>
+        <h2 class="display h-l reveal">Recognisable at any size.</h2>
+        <p class="lead muted reveal">Use the icon alone for profile pictures, favicons, stickers and merch. It holds up all the way down to 16 pixels.</p>
+      </div>
+      <div class="sizes reveal">
+        <figure><img class="app" src="assets/logo/app-icon.svg" alt="Profile picture version of the icon" width="180" height="180">Profile picture</figure>
+        <figure><img src="assets/logo/icon.svg" alt="" width="96" height="96">96 px</figure>
+        <figure><img src="assets/logo/icon-light.svg" alt="" width="64" height="64">64 px</figure>
+        <figure><img src="assets/logo/icon.svg" alt="" width="32" height="32">32 px</figure>
+        <figure><img src="assets/logo/icon-light.svg" alt="" width="16" height="16">16 px</figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper" style="padding-top:0">
+    <div class="wrap split">
+      <div class="split__aside">
+        <p class="label"><span class="n">04</span> Clear space</p>
+        <h2 class="display">Give it room.</h2>
+        <p class="muted" style="margin-top:20px">Keep a clear space around the logo at least equal to <strong>x</strong> — the height of the letter O. Don’t use the horizontal logo narrower than 120 px on screen or 30 mm in print.</p>
+      </div>
+      <div class="clear reveal">
+        <div class="clear__box">
+          <span class="clear__x" aria-hidden="true">x</span>
+          <img src="assets/logo/logo-horizontal-light.svg" alt="Logo shown with its clear space" width="474" height="72">
+          <span class="clear__x clear__x--br" aria-hidden="true">x</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="label reveal"><span class="n">05</span> Colour</p>
+        <h2 class="display h-l reveal">Loud on purpose.</h2>
+      </div>
+      <div class="swatches reveal">
+        <div class="swatch"><div class="swatch__c bg-ink" style="color:var(--paper)">Ink</div><div class="swatch__m"><strong>Ink</strong><code>#0A0A10</code><code>RGB 10 10 16</code></div></div>
+        <div class="swatch"><div class="swatch__c bg-lime">Signal lime</div><div class="swatch__m"><strong>Signal lime</strong><code>#D4FF3F</code><code>RGB 212 255 63</code></div></div>
+        <div class="swatch"><div class="swatch__c bg-blue" style="color:#fff">Electric blue</div><div class="swatch__m"><strong>Electric blue</strong><code>#2B36FF</code><code>RGB 43 54 255</code></div></div>
+        <div class="swatch"><div class="swatch__c bg-paper">Paper</div><div class="swatch__m"><strong>Paper</strong><code>#F3F0E7</code><code>RGB 243 240 231</code></div></div>
+        <div class="swatch"><div class="swatch__c bg-coral">Coral</div><div class="swatch__m"><strong>Coral</strong><code>#FF5B3A</code><code>RGB 255 91 58</code></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="label reveal"><span class="n">06</span> Please don’t</p>
+        <h2 class="display h-l reveal">Keep it sharp.</h2>
+      </div>
+      <div class="donts reveal">
+        <div class="dont"><div class="dont__stage bg-paper"><img src="assets/logo/logo-horizontal-light.svg" alt="" style="transform:scaleX(1.35) scaleY(.8);width:74%"></div><p>Stretch or squash it</p></div>
+        <div class="dont"><div class="dont__stage bg-paper"><img src="assets/logo/logo-horizontal-light.svg" alt="" style="transform:rotate(-14deg)"></div><p>Rotate it</p></div>
+        <div class="dont"><div class="dont__stage bg-ink"><img src="assets/logo/logo-horizontal-dark.svg" alt="" style="filter:hue-rotate(150deg) saturate(1.6)"></div><p>Change the colours</p></div>
+        <div class="dont"><div class="dont__stage bg-blue"><img src="assets/logo/logo-horizontal-black.svg" alt=""></div><p>Use it with low contrast</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper-2">
+    <div class="wrap split">
+      <div class="split__aside">
+        <p class="label"><span class="n">07</span> Downloads</p>
+        <h2 class="display">Take it with you.</h2>
+        <p class="muted" style="margin-top:20px">SVG files are sharp at any size — use them for the web, print and design tools. Use the PNG profile picture for Instagram and Facebook.</p>
+      </div>
+      <ul class="files reveal">
+        <li><div><strong>Profile picture · PNG 1080 × 1080</strong><span>Instagram, Facebook, WhatsApp</span></div><a class="btn btn--ink btn--sm" href="assets/logo/goactive-profile-1080.png" download>Download</a></li>
+        <li><div><strong>Horizontal logo · on dark · PNG</strong><span>Presentations, documents, social posts</span></div><a class="btn btn--ink btn--sm" href="assets/logo/goactive-logo-dark.png" download>Download</a></li>
+        <li><div><strong>Horizontal logo · on light · PNG, transparent</strong><span>Certificates, letters, partner materials</span></div><a class="btn btn--ink btn--sm" href="assets/logo/goactive-logo-light-transparent.png" download>Download</a></li>
+        <li><div><strong>Horizontal logo · SVG</strong><span>Dark, light, black and white versions</span></div><a class="btn btn--ghost btn--sm" href="assets/logo/logo-horizontal-dark.svg" download>Dark</a></li>
+        <li><div><strong>Stacked logo · SVG</strong><span>Dark, light, black and white versions</span></div><a class="btn btn--ghost btn--sm" href="assets/logo/logo-stacked-dark.svg" download>Dark</a></li>
+        <li><div><strong>Icon · SVG</strong><span>Favicon, stickers, merch</span></div><a class="btn btn--ghost btn--sm" href="assets/logo/icon.svg" download>Icon</a></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__cta">
+        <p class="display">Your voice.<br><span class="hl">Our next project.</span></p>
+        <a class="btn" href="ideas.html">Share your idea <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 11 11 3M5 3h6v6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div><h4>Explore</h4><ul><li><a href="index.html">Our mission</a></li><li><a href="ideas.html">Tell us your ideas</a></li><li><a href="contact.html">Contact</a></li><li><a href="contact.html#partner">Partner with us</a></li><li><a href="brand.html">Logo &amp; brand</a></li></ul></div>
+      <div><h4>Team</h4><ul><li><a href="daniel-butnar.html">Daniel Butnar</a></li><li><a href="vlad-rusu.html">Vlad Rusu</a></li><li><a href="bianca-constantin.html">Bianca Constantin</a></li></ul></div>
+      <div><h4>Connect</h4><ul><li><a href="mailto:daniel.butnar@gmail.com">daniel.butnar@gmail.com</a></li><li><a href="#" data-social="instagram">Instagram</a></li><li><a href="#" data-social="facebook">Facebook</a></li></ul></div>
+    </div>
+    <p class="footer__word" aria-hidden="true">GoActive</p>
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> GoActive Bucharest · Informal youth group · <a href="privacy.html">Privacy Policy</a> · <a href="cookies.html">Cookie Policy</a></span>
+      <span>Erasmus+ is a programme of the European Union. This is not an official EU website.</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
