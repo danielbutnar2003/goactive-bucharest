@@ -20,7 +20,6 @@ Live at **https://goactivebucharest.me** (once the domain is connected, see belo
 | `assets/js/main.js` | Menu, animations and form handling. **Settings live at the top.** |
 | `assets/logo/` | Logo files (SVG and PNG) |
 | `assets/img/` | Team photos: add `daniel.jpg`, `vlad.jpg`, `bianca.jpg` (portrait, about 4:5) |
-| `CNAME` | Custom domain for GitHub Pages |
 
 ## Preview locally
 
@@ -41,7 +40,7 @@ npx serve .
 
 1. Push this folder to `github.com/danielbutnar2003/goactive-bucharest` (branch `main`).
 2. Repository **Settings → Pages → Build and deployment**: Source "Deploy from a branch", branch `main`, folder `/ (root)`.
-3. The `CNAME` file sets the custom domain `goactivebucharest.me` automatically.
+3. Until goactivebucharest.me is registered, the site is live at https://danielbutnar2003.github.io/goactive-bucharest/. After adding the DNS records below, set the custom domain under **Settings → Pages → Custom domain** (GitHub then adds a `CNAME` file to the repository).
 
 ## Free domain with the GitHub Student Developer Pack
 
