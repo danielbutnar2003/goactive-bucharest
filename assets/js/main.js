@@ -8,8 +8,7 @@
   const CONFIG = {
     email: "daniel.butnar@gmail.com",
     // Paste the full links to your pages here, e.g. "https://www.instagram.com/your.handle"
-    instagram: "",
-    facebook: "",
+    instagram: "https://www.instagram.com/goactivebucharest",
     // Both forms are delivered to your inbox through FormSubmit (formsubmit.co), no account needed.
     // The very first submission sends an activation email to the address below — click the link once.
     formEndpoint: "https://formsubmit.co/ajax/daniel.butnar@gmail.com",

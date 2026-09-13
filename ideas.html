@@ -83,7 +83,7 @@
       <div class="hero__bottom">
         <p class="lead">Forget the brochure. Tell us what you actually want to learn, where you want to go and what would make you feel like you belong. <strong>We read every answer — and our next project starts here.</strong></p>
         <div class="hero__facts">
-          <div class="hero__fact"><strong>5 min</strong><span>to fill in</span></div>
+          <div class="hero__fact"><strong>1 min</strong><span>for the quick version</span></div>
           <div class="hero__fact"><strong>0</strong><span>experience needed</span></div>
           <div class="hero__fact"><strong>100%</strong><span>read by our team</span></div>
         </div>
@@ -120,12 +120,13 @@
           <div class="hp" aria-hidden="true"><label>Leave this field empty <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
 
           <fieldset class="fieldset">
-            <legend class="legend"><span class="n">01</span><span class="t">About you</span></legend>
-            <div class="grid-2">
-              <div class="field">
-                <label for="i-name">First name <span class="opt">(optional)</span></label>
-                <input class="input" id="i-name" name="Name" type="text" autocomplete="given-name" placeholder="Ana">
-              </div>
+            <legend class="legend"><span class="n">01</span><span class="t">Your idea</span></legend>
+            <div class="field">
+              <label for="i-idea">If you could design the next youth exchange, what would happen? <span class="req" aria-hidden="true">*</span></label>
+              <textarea class="input" id="i-idea" name="Big idea" required maxlength="2000" placeholder="A week where we… The one thing I’d want to learn is… By the end, I’d want to feel…"></textarea>
+              <div class="field__row"><p class="hint">A few sentences is perfect.</p><span class="counter" data-counter-for="i-idea" aria-live="polite"></span></div>
+            </div>
+            <div class="grid-2" style="margin-top:26px">
               <div class="field">
                 <label for="i-age">Age group <span class="req" aria-hidden="true">*</span></label>
                 <select class="input" id="i-age" name="Age group" required>
@@ -138,107 +139,118 @@
                 </select>
               </div>
               <div class="field">
-                <label for="i-city">City or town <span class="opt">(optional)</span></label>
-                <input class="input" id="i-city" name="City" type="text" autocomplete="address-level2" placeholder="Bucharest, Buzău, a village near Iași…">
-              </div>
-              <div class="field">
-                <label for="i-email">Email <span class="opt">(to hear back)</span></label>
+                <label for="i-email">Email <span class="opt">(optional, to hear back)</span></label>
                 <input class="input" id="i-email" name="Email" type="email" autocomplete="email" placeholder="you@example.com">
               </div>
             </div>
+            <p class="quick-note">That’s all we need — about a minute. Want to shape the details too? Open the section below.</p>
           </fieldset>
 
-          <fieldset class="fieldset">
-            <legend class="legend"><span class="n">02</span><span class="t">The topic</span></legend>
-            <fieldset class="group" data-required-group>
-              <legend class="group-label">What should the exchange be about? <span class="req" aria-hidden="true">*</span> <span class="opt">Pick as many as you like.</span></legend>
-              <div class="choices">
-                <label class="choice"><input type="checkbox" name="Topics" value="Mental health &amp; wellbeing"><span>Mental health &amp; wellbeing</span></label>
-                <label class="choice"><input type="checkbox" name="Topics" value="Climate &amp; green living"><span>Climate &amp; green living</span></label>
-                <label class="choice"><input type="checkbox" name="Topics" value="Digital skills &amp; AI"><span>Digital skills &amp; AI</span></label>
-                <label class="choice"><input type="checkbox" name="Topics" value="Democracy &amp; youth participation"><span>Democracy &amp; participation</span></label>
-                <label class="choice"><input type="checkbox" name="Topics" value="Inclusion &amp; diversity"><span>Inclusion &amp; diversity</span></label>
-                <label class="choice"><input type="checkbox" name="Topics" value="Media literacy &amp; fake news"><span>Media literacy &amp; fake news</span></label>
-                <label class="choice"><input type="checkbox" name="Topics" value="Arts, music &amp; culture"><span>Arts, music &amp; culture</span></label>
-                <label class="choice"><input type="checkbox" name="Topics" value="Sport &amp; healthy lifestyle"><span>Sport &amp; healthy lifestyle</span></label>
-                <label class="choice"><input type="checkbox" name="Topics" value="Entrepreneurship &amp; careers"><span>Entrepreneurship &amp; careers</span></label>
-                <label class="choice"><input type="checkbox" name="Topics" value="Human rights &amp; anti-discrimination"><span>Human rights</span></label>
-                <label class="choice"><input type="checkbox" name="Topics" value="Something else"><span>Something else</span></label>
-              </div>
-              <p class="group-error" role="alert">Pick at least one topic.</p>
-            </fieldset>
-          </fieldset>
+          <details class="form-more">
+            <summary><span>Add more detail <small>Optional · topic, format and what would make you feel included · about 3 minutes</small></span></summary>
+            <div class="form-more__body">
 
-          <fieldset class="fieldset">
-            <legend class="legend"><span class="n">03</span><span class="t">The format</span></legend>
-            <fieldset class="group">
-              <legend class="group-label">What would you love to do there? <span class="opt">(optional)</span></legend>
-              <div class="choices">
-                <label class="choice"><input type="checkbox" name="Activities" value="Hands-on workshops"><span>Hands-on workshops</span></label>
-                <label class="choice"><input type="checkbox" name="Activities" value="Outdoor &amp; nature"><span>Outdoor &amp; nature</span></label>
-                <label class="choice"><input type="checkbox" name="Activities" value="Theatre &amp; improv"><span>Theatre &amp; improv</span></label>
-                <label class="choice"><input type="checkbox" name="Activities" value="Video, photo &amp; podcasts"><span>Video, photo &amp; podcasts</span></label>
-                <label class="choice"><input type="checkbox" name="Activities" value="Debates"><span>Debates</span></label>
-                <label class="choice"><input type="checkbox" name="Activities" value="Hackathon"><span>Hackathon</span></label>
-                <label class="choice"><input type="checkbox" name="Activities" value="Intercultural nights"><span>Intercultural nights</span></label>
-                <label class="choice"><input type="checkbox" name="Activities" value="Volunteering in the local community"><span>Local volunteering</span></label>
-                <label class="choice"><input type="checkbox" name="Activities" value="Sport &amp; games"><span>Sport &amp; games</span></label>
-              </div>
-            </fieldset>
+              <fieldset class="fieldset">
+                <legend class="legend"><span class="n">02</span><span class="t">About you</span></legend>
+                <div class="grid-2">
+                  <div class="field">
+                    <label for="i-name">First name <span class="opt">(optional)</span></label>
+                    <input class="input" id="i-name" name="Name" type="text" autocomplete="given-name" placeholder="Ana">
+                  </div>
+                  <div class="field">
+                    <label for="i-city">City or town <span class="opt">(optional)</span></label>
+                    <input class="input" id="i-city" name="City" type="text" autocomplete="address-level2" placeholder="Bucharest, Buzău, a village near Iași…">
+                  </div>
+                </div>
+              </fieldset>
 
-            <fieldset class="group">
-              <legend class="group-label">How long should it be? <span class="req" aria-hidden="true">*</span></legend>
-              <div class="choices">
-                <label class="choice"><input type="radio" name="Duration" value="5–7 days" required><span>5–7 days</span></label>
-                <label class="choice"><input type="radio" name="Duration" value="8–10 days"><span>8–10 days</span></label>
-                <label class="choice"><input type="radio" name="Duration" value="11–14 days"><span>11–14 days</span></label>
-                <label class="choice"><input type="radio" name="Duration" value="No preference"><span>No preference</span></label>
-              </div>
-            </fieldset>
+              <fieldset class="fieldset">
+                <legend class="legend"><span class="n">03</span><span class="t">The topic</span></legend>
+                <fieldset class="group">
+                  <legend class="group-label">What should the exchange be about? <span class="opt">Pick as many as you like.</span></legend>
+                  <div class="choices">
+                    <label class="choice"><input type="checkbox" name="Topics" value="Mental health &amp; wellbeing"><span>Mental health &amp; wellbeing</span></label>
+                    <label class="choice"><input type="checkbox" name="Topics" value="Climate &amp; green living"><span>Climate &amp; green living</span></label>
+                    <label class="choice"><input type="checkbox" name="Topics" value="Digital skills &amp; AI"><span>Digital skills &amp; AI</span></label>
+                    <label class="choice"><input type="checkbox" name="Topics" value="Democracy &amp; youth participation"><span>Democracy &amp; participation</span></label>
+                    <label class="choice"><input type="checkbox" name="Topics" value="Inclusion &amp; diversity"><span>Inclusion &amp; diversity</span></label>
+                    <label class="choice"><input type="checkbox" name="Topics" value="Media literacy &amp; fake news"><span>Media literacy &amp; fake news</span></label>
+                    <label class="choice"><input type="checkbox" name="Topics" value="Arts, music &amp; culture"><span>Arts, music &amp; culture</span></label>
+                    <label class="choice"><input type="checkbox" name="Topics" value="Sport &amp; healthy lifestyle"><span>Sport &amp; healthy lifestyle</span></label>
+                    <label class="choice"><input type="checkbox" name="Topics" value="Entrepreneurship &amp; careers"><span>Entrepreneurship &amp; careers</span></label>
+                    <label class="choice"><input type="checkbox" name="Topics" value="Human rights &amp; anti-discrimination"><span>Human rights</span></label>
+                    <label class="choice"><input type="checkbox" name="Topics" value="Something else"><span>Something else</span></label>
+                  </div>
+                </fieldset>
+              </fieldset>
 
-            <div class="grid-2" style="margin-top:30px">
-              <div class="field">
-                <label for="i-where">Dream destination <span class="opt">(optional)</span></label>
-                <input class="input" id="i-where" name="Destination" type="text" placeholder="Portugal, the mountains, by the sea…">
-              </div>
-              <div class="field">
-                <label for="i-host">Where should it happen? <span class="opt">(optional)</span></label>
-                <select class="input" id="i-host" name="Host">
-                  <option value="">Choose…</option>
-                  <option>Abroad — I want to travel</option>
-                  <option>In Romania — let’s host Europe here</option>
-                  <option>Either is great</option>
-                </select>
-              </div>
+              <fieldset class="fieldset">
+                <legend class="legend"><span class="n">04</span><span class="t">The format</span></legend>
+                <fieldset class="group">
+                  <legend class="group-label">What would you love to do there?</legend>
+                  <div class="choices">
+                    <label class="choice"><input type="checkbox" name="Activities" value="Hands-on workshops"><span>Hands-on workshops</span></label>
+                    <label class="choice"><input type="checkbox" name="Activities" value="Outdoor &amp; nature"><span>Outdoor &amp; nature</span></label>
+                    <label class="choice"><input type="checkbox" name="Activities" value="Theatre &amp; improv"><span>Theatre &amp; improv</span></label>
+                    <label class="choice"><input type="checkbox" name="Activities" value="Video, photo &amp; podcasts"><span>Video, photo &amp; podcasts</span></label>
+                    <label class="choice"><input type="checkbox" name="Activities" value="Debates"><span>Debates</span></label>
+                    <label class="choice"><input type="checkbox" name="Activities" value="Hackathon"><span>Hackathon</span></label>
+                    <label class="choice"><input type="checkbox" name="Activities" value="Intercultural nights"><span>Intercultural nights</span></label>
+                    <label class="choice"><input type="checkbox" name="Activities" value="Volunteering in the local community"><span>Local volunteering</span></label>
+                    <label class="choice"><input type="checkbox" name="Activities" value="Sport &amp; games"><span>Sport &amp; games</span></label>
+                  </div>
+                </fieldset>
+
+                <fieldset class="group">
+                  <legend class="group-label">How long should it be?</legend>
+                  <div class="choices">
+                    <label class="choice"><input type="radio" name="Duration" value="5–7 days"><span>5–7 days</span></label>
+                    <label class="choice"><input type="radio" name="Duration" value="8–10 days"><span>8–10 days</span></label>
+                    <label class="choice"><input type="radio" name="Duration" value="11–14 days"><span>11–14 days</span></label>
+                    <label class="choice"><input type="radio" name="Duration" value="No preference"><span>No preference</span></label>
+                  </div>
+                </fieldset>
+
+                <div class="grid-2" style="margin-top:30px">
+                  <div class="field">
+                    <label for="i-where">Dream destination</label>
+                    <input class="input" id="i-where" name="Destination" type="text" placeholder="Portugal, the mountains, by the sea…">
+                  </div>
+                  <div class="field">
+                    <label for="i-host">Where should it happen?</label>
+                    <select class="input" id="i-host" name="Host">
+                      <option value="">Choose…</option>
+                      <option>Abroad — I want to travel</option>
+                      <option>In Romania — let’s host Europe here</option>
+                      <option>Either is great</option>
+                    </select>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="fieldset">
+                <legend class="legend"><span class="n">05</span><span class="t">Belonging</span></legend>
+                <div class="field">
+                  <label for="i-belong">What would make you feel truly included?</label>
+                  <textarea class="input" id="i-belong" name="Feeling included" maxlength="1000" style="min-height:120px" placeholder="Smaller groups, a buddy on the first day, food I can eat, clear info for my parents…"></textarea>
+                </div>
+
+                <fieldset class="group">
+                  <legend class="group-label">Is anything stopping you from joining a project? <span class="opt">(helps us plan support)</span></legend>
+                  <div class="choices">
+                    <label class="choice"><input type="checkbox" name="Barriers" value="Costs"><span>Costs</span></label>
+                    <label class="choice"><input type="checkbox" name="Barriers" value="Language"><span>Language</span></label>
+                    <label class="choice"><input type="checkbox" name="Barriers" value="Never travelled alone"><span>Never travelled alone</span></label>
+                    <label class="choice"><input type="checkbox" name="Barriers" value="Accessibility / disability"><span>Accessibility needs</span></label>
+                    <label class="choice"><input type="checkbox" name="Barriers" value="Parents' permission"><span>Parents’ permission</span></label>
+                    <label class="choice"><input type="checkbox" name="Barriers" value="School or work schedule"><span>School or work schedule</span></label>
+                    <label class="choice"><input type="checkbox" name="Barriers" value="Didn't know it existed"><span>Didn’t know it existed</span></label>
+                  </div>
+                </fieldset>
+              </fieldset>
+
             </div>
-          </fieldset>
-
-          <fieldset class="fieldset">
-            <legend class="legend"><span class="n">04</span><span class="t">Your big idea</span></legend>
-            <div class="field">
-              <div class="field__row"><label for="i-idea">If you could design the exchange from scratch, what would happen? <span class="req" aria-hidden="true">*</span></label></div>
-              <textarea class="input" id="i-idea" name="Big idea" required maxlength="2000" placeholder="A week where we… The one thing I’d want to learn is… By the end, I’d want to feel…"></textarea>
-              <div class="field__row"><p class="hint">A few sentences is perfect.</p><span class="counter" data-counter-for="i-idea" aria-live="polite"></span></div>
-            </div>
-
-            <div class="field" style="margin-top:30px">
-              <label for="i-belong">What would make you feel truly included? <span class="opt">(optional)</span></label>
-              <textarea class="input" id="i-belong" name="Feeling included" maxlength="1000" style="min-height:120px" placeholder="Smaller groups, a buddy on the first day, food I can eat, clear info for my parents…"></textarea>
-            </div>
-
-            <fieldset class="group">
-              <legend class="group-label">Is anything stopping you from joining a project? <span class="opt">(optional, helps us plan support)</span></legend>
-              <div class="choices">
-                <label class="choice"><input type="checkbox" name="Barriers" value="Costs"><span>Costs</span></label>
-                <label class="choice"><input type="checkbox" name="Barriers" value="Language"><span>Language</span></label>
-                <label class="choice"><input type="checkbox" name="Barriers" value="Never travelled alone"><span>Never travelled alone</span></label>
-                <label class="choice"><input type="checkbox" name="Barriers" value="Accessibility / disability"><span>Accessibility needs</span></label>
-                <label class="choice"><input type="checkbox" name="Barriers" value="Parents' permission"><span>Parents’ permission</span></label>
-                <label class="choice"><input type="checkbox" name="Barriers" value="School or work schedule"><span>School or work schedule</span></label>
-                <label class="choice"><input type="checkbox" name="Barriers" value="Didn't know it existed"><span>Didn’t know it existed</span></label>
-              </div>
-            </fieldset>
-          </fieldset>
+          </details>
 
           <div class="form__footer">
             <label class="consent"><input type="checkbox" name="Consent" value="Yes" required><span>I agree that GoActive Bucharest may store my answers to plan future projects and, if I left my email, contact me about them. If I shared accessibility or health needs, I explicitly consent to their use only to plan support. I have read the <a href="privacy.html">Privacy Policy</a>. Under 16? A parent or guardian must agree first.</span></label>
@@ -300,9 +312,9 @@
       </div>
       <div><h2 class="footer__h">Explore</h2><ul><li><a href="index.html">Our mission</a></li><li><a href="ideas.html">Tell us your ideas</a></li><li><a href="contact.html">Contact</a></li><li><a href="contact.html#partner">Partner with us</a></li><li><a href="brand.html">Logo &amp; brand</a></li></ul></div>
       <div><h2 class="footer__h">Team</h2><ul><li><a href="daniel-butnar.html">Daniel Butnar</a></li><li><a href="vlad-rusu.html">Vlad Rusu</a></li><li><a href="bianca-constantin.html">Bianca Constantin</a></li></ul></div>
-      <div><h2 class="footer__h">Connect</h2><ul><li><a href="mailto:daniel.butnar@gmail.com">daniel.butnar@gmail.com</a></li><li><a href="#" data-social="instagram">Instagram</a></li><li><a href="#" data-social="facebook">Facebook</a></li></ul></div>
+      <div><h2 class="footer__h">Connect</h2><ul><li><a href="mailto:daniel.butnar@gmail.com">daniel.butnar@gmail.com</a></li><li><a href="https://www.instagram.com/goactivebucharest" target="_blank" rel="noopener">Instagram ↗</a></li></ul></div>
     </div>
-    <p class="footer__word" aria-hidden="true">GoActive</p>
+    <img class="footer__word" src="assets/logo/wordmark-ghost.svg" alt="" aria-hidden="true" width="382" height="44" loading="lazy">
     <div class="footer__bottom">
       <span>© <span data-year>2026</span> GoActive Bucharest · Informal youth group · <a href="privacy.html">Privacy Policy</a> · <a href="cookies.html">Cookie Policy</a></span>
       <span><button class="motion-toggle" type="button" data-motion-toggle aria-pressed="false">Pause animations</button> · Erasmus+ is a programme of the European Union. This is not an official EU website.</span>

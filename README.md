@@ -32,7 +32,7 @@ npx serve .
 
 ## Before going live
 
-- [ ] Add the Instagram and Facebook links in `CONFIG` at the top of `assets/js/main.js`.
+- [x] Instagram linked (https://www.instagram.com/goactivebucharest). Facebook is not used.
 - [ ] Add team photos to `assets/img/`.
 - [ ] **Activate the forms:** submit one test from the live site. FormSubmit emails an activation link to daniel.butnar@gmail.com. Click it once, and all later submissions arrive normally.
 - [ ] Have the Privacy and Cookie policies reviewed by someone with legal knowledge, and update them if you add any new service (for example, analytics).
