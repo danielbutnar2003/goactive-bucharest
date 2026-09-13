@@ -84,7 +84,7 @@ git push
 
 | Measure | Where |
 | --- | --- |
-| HTTPS only (switch on **Enforce HTTPS** in Settings, Pages once the certificate is issued) | GitHub Pages |
+| HTTPS enforced, http redirects permanently to https (certificate by GitHub, renews automatically) | GitHub Pages |
 | Content Security Policy: scripts, styles and fonts only from this site, forms only to formsubmit.co | meta tag in every page |
 | Referrer policy strict-origin-when-cross-origin | meta tag in every page |
 | No cookies, no analytics, no third-party scripts, self-hosted fonts | whole site |
@@ -95,7 +95,7 @@ git push
 
 **If you edit the one-line inline script** in the page head, its sha256 hash in the Content Security Policy must be updated too, or the animations stop working.
 
-**GitHub Pages limits:** custom HTTP headers cannot be set, so frame-ancestors and Permissions-Policy are not available. This is acceptable for a static site without logins. GitHub adds HSTS automatically when HTTPS is enforced.
+**GitHub Pages limits:** custom HTTP headers cannot be set, so frame-ancestors and Permissions-Policy are not available. This is acceptable for a static site without logins. GitHub Pages does not send an HSTS header on custom domains, so plain http visits rely on the permanent redirect to https, which is active.
 
 ### Account security checklist
 
