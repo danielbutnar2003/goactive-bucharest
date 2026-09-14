@@ -70,6 +70,27 @@ npx serve .
 4. In the repository's **Settings → Pages**, confirm the custom domain shows `goactivebucharest.me`. When the DNS check passes (from minutes up to 24 hours), tick **Enforce HTTPS**.
 5. Recommended for security: in your **GitHub profile Settings → Pages → Add a domain**, verify `goactivebucharest.me` with the TXT record GitHub gives you. This stops anyone else from using your domain on GitHub.
 
+## DNS and hosting (current setup)
+
+Since 14 September 2026 the DNS for **goactivebucharest.me** is managed in **Cloudflare** (Free plan). Namecheap is only the registrar.
+
+- **Nameservers** at Namecheap: `alexia.ns.cloudflare.com` and `hans.ns.cloudflare.com` (Custom DNS).
+- **Hosting:** GitHub Pages serves the site. The main domain has a GitHub certificate that renews automatically.
+
+| Record | Value | Cloudflare proxy |
+| --- | --- | --- |
+| A `@` (x4) | `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153` | **DNS only** (grey) |
+| AAAA `@` (x4) | `2606:50c0:8000::153` to `2606:50c0:8003::153` | **DNS only** (grey) |
+| CNAME `www` | `danielbutnar2003.github.io` | **Proxied** (orange) |
+| TXT `@` | Google Search Console verification (keep it) | DNS only |
+| TXT / MX `@` | Namecheap email forwarding (unused, harmless) | DNS only |
+
+**Cloudflare settings:** SSL/TLS encryption mode is **Full**. The `www` address uses the Cloudflare certificate and forwards to https://goactivebucharest.me.
+
+**Do not proxy the main domain records.** If the A/AAAA records are switched to Proxied, visitors can get certificate errors and GitHub cannot renew its certificate.
+
+**Google Search Console:** domain property verified by the TXT record above; sitemap submitted as `https://goactivebucharest.me/sitemap.xml`.
+
 ## Updating the site
 
 Edit the files, then commit and push. GitHub Pages republishes within about a minute.
