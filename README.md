@@ -20,7 +20,7 @@ Live at **https://goactivebucharest.me** (once the domain is connected, see belo
 | `assets/js/main.js` | Menu, animations and form handling. **Settings live at the top.** |
 | `assets/logo/` | Logo files (SVG and PNG) |
 | `CNAME` | Custom domain for GitHub Pages (goactivebucharest.me) |
-| `assets/img/` | Team photos: add `daniel.jpg`, `vlad.jpg`, `bianca.jpg` (portrait, about 4:5) |
+| `assets/img/` | Team photos `daniel.jpg`, `vlad.jpg`, `bianca.jpg` (portrait 4:5, JPEG). Replace a file with the same name to update a photo. |
 
 ## Preview locally
 
@@ -33,7 +33,7 @@ npx serve .
 ## Before going live
 
 - [x] Instagram linked (https://www.instagram.com/goactivebucharest). Facebook is not used.
-- [ ] Add team photos to `assets/img/`.
+- [x] Team photos added (15 September 2026). Daniel's source photo is only 400 px wide; swap in a larger original when there is one.
 - [ ] **Activate the forms:** submit one test from the live site. FormSubmit emails an activation link to daniel.butnar@gmail.com. Click it once, and all later submissions arrive normally.
 - [ ] Have the Privacy and Cookie policies reviewed by someone with legal knowledge, and update them if you add any new service (for example, analytics).
 
@@ -116,7 +116,7 @@ git push
 
 **If you edit the one-line inline script** in the page head, its sha256 hash in the Content Security Policy must be updated too, or the animations stop working.
 
-**GitHub Pages limits:** custom HTTP headers cannot be set, so frame-ancestors and Permissions-Policy are not available. This is acceptable for a static site without logins. GitHub Pages does not send an HSTS header on custom domains, so plain http visits rely on the permanent redirect to https, which is active.
+**GitHub Pages limits:** custom HTTP headers cannot be set, so frame-ancestors and Permissions-Policy are not available. This is acceptable for a static site without logins. GitHub Pages sends a Strict-Transport-Security header (one year) on the custom domain, and plain http visits are redirected permanently to https (checked 15 September 2026).
 
 ### Account security checklist
 

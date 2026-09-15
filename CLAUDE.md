@@ -13,7 +13,7 @@ Static site for an informal youth group (Erasmus+ youth exchanges). Plain HTML, 
 - Every page carries a Content Security Policy meta tag. The one inline script (`document.documentElement.classList.add("js")`) is allowed by a sha256 hash in that CSP, identical across all 10 pages. If that line changes, recompute the hash and update every page, or the animations break. Never add other inline scripts or inline event handlers; put JS in `main.js`.
 - Forms post to FormSubmit (`formsubmit.co`); it is the only external domain in the CSP `connect-src` and `form-action`. Any new external service must be added to the CSP in every page and to the privacy and cookie policies first.
 - Keep the head block complete on every page: title, description, canonical, theme-color, Open Graph, twitter card. `og:image` is `assets/logo/og-image.png` (1200x630).
-- Team photos `assets/img/{daniel,vlad,bianca}.jpg` are referenced but not committed; the JS shows a monogram until they exist. Don't remove the fallback.
+- Team photos are `assets/img/{daniel,vlad,bianca}.jpg` (4:5 JPEG, cropped from the originals). The JS still shows a monogram if a file is missing; don't remove that fallback.
 - Respect `prefers-reduced-motion` (main.js already checks it) and keep keyboard access for the mobile menu (`inert`, `aria-expanded`).
 - Language: site copy is English (`lang="en"`, `og:locale` en_GB). Keep the tone: short, direct, youth-facing, no corporate filler.
 
