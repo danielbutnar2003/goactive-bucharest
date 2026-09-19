@@ -447,8 +447,10 @@ a.tag:hover { background: var(--lime); color: var(--ink); border-color: var(--li
 .pull { font-family: var(--display); font-weight: 800; font-stretch: 100%; font-size: clamp(1.7rem, 3.4vw, 3.2rem); line-height: 1.04; letter-spacing: -.035em; margin: 0; text-wrap: balance; }
 
 .next { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: clamp(56px, 7vw, 100px) 0; text-decoration: none; color: inherit; }
+/* The name must fit beside the arrow on phones: below about 420px the minimum size scales down so the longest word ("Constantin") stays whole; min-width and overflow-wrap stop any longer name from widening the page. */
+.next > div { min-width: 0; }
 .next .label { color: var(--muted); margin-bottom: 18px; }
-.next .display { font-size: clamp(2.3rem, 7vw, 7rem); transition: color .3s; }
+.next .display { font-size: clamp(min(2.3rem, 12.5vw - 16px), 7vw, 7rem); overflow-wrap: anywhere; transition: color .3s; }
 .next:hover .display { color: var(--lime); }
 .next__arrow { flex: none; display: grid; place-items: center; width: clamp(64px, 8vw, 124px); aspect-ratio: 1; border-radius: 50%; background: var(--lime); color: var(--ink); transition: transform .6s var(--ease); }
 .next__arrow svg { width: 38%; height: 38%; }

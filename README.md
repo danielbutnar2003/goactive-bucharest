@@ -3,7 +3,7 @@
 Static website for GoActive Bucharest, an informal youth group building inclusive Erasmus+ youth exchanges.
 Plain HTML, CSS and JavaScript: no build step, no dependencies, no cookies.
 
-Live at **https://goactivebucharest.me** (once the domain is connected, see below).
+Live at **https://goactivebucharest.me** (`www` redirects there; checked 20 September 2026).
 
 ## Structure
 
@@ -30,7 +30,9 @@ Open `index.html` in a browser, or run a small local server from this folder:
 npx serve .
 ```
 
-## Before going live
+## Launch checklist
+
+The site is live. Unticked items were still open on 20 September 2026; tick them once they are done.
 
 - [x] Instagram linked (https://www.instagram.com/goactivebucharest). Facebook is not used.
 - [x] Team photos added (15 September 2026). Daniel's source photo is only 400 px wide; swap in a larger original when there is one.
@@ -39,7 +41,9 @@ npx serve .
 
 ## Hosting on GitHub Pages
 
-1. Push this folder to `github.com/danielbutnar2003/goactive-bucharest` (branch `main`).
+Already set up; the steps are kept so the hosting can be rebuilt.
+
+1. The site lives in `github.com/danielbutnar2003/goactive-bucharest` (branch `main`). Every push to `main` is a deploy.
 2. Repository **Settings → Pages → Build and deployment**: Source "Deploy from a branch", branch `main`, folder `/ (root)`.
 3. The custom domain **goactivebucharest.me** is connected through the `CNAME` file. Keep that file in the repository.
 
