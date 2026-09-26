@@ -17,12 +17,6 @@
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const body = document.body;
 
-  /* ---------- Header state ---------- */
-  const header = document.querySelector(".site-header");
-  const onScroll = () => header && header.classList.toggle("is-scrolled", window.scrollY > 24);
-  onScroll();
-  window.addEventListener("scroll", onScroll, { passive: true });
-
   /* ---------- Mobile menu ---------- */
   const burger = document.querySelector(".burger");
   const menu = document.querySelector(".mobile-menu");
@@ -39,25 +33,7 @@
   menu?.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setMenu(false)));
   window.addEventListener("resize", () => { if (window.innerWidth > 1000) setMenu(false); });
 
-  /* ---------- Team dropdown ---------- */
-  const drops = document.querySelectorAll(".nav__drop");
-  const closeDrops = () => drops.forEach((d) => {
-    d.classList.remove("is-open");
-    d.querySelector("button")?.setAttribute("aria-expanded", "false");
-  });
-  drops.forEach((d) => {
-    const btn = d.querySelector("button");
-    btn?.addEventListener("click", () => {
-      const open = !d.classList.contains("is-open");
-      closeDrops();
-      d.classList.toggle("is-open", open);
-      btn.setAttribute("aria-expanded", String(open));
-    });
-  });
-  document.addEventListener("click", (e) => { if (!e.target.closest(".nav__drop")) closeDrops(); });
-  window.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") { setMenu(false); closeDrops(); }
-  });
+  window.addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(false); });
 
   /* ---------- Load + reveal ---------- */
   requestAnimationFrame(() => requestAnimationFrame(() => body.classList.add("is-loaded")));
@@ -173,6 +149,20 @@
     const submit = form.querySelector('[type="submit"]');
     const submitLabel = submit?.querySelector(".btn__label");
     const groups = form.querySelectorAll("[data-required-group]");
+    const echo = success?.querySelector("[data-echo]");
+    const gate = () => {
+      if (form.hasAttribute("data-gate")) submit.setAttribute("aria-disabled", String(!form.checkValidity()));
+    };
+    form.addEventListener("input", gate);
+    form.addEventListener("change", gate);
+
+    // A minlength field must hold that many characters besides spaces (the home idea form: 3).
+    form.querySelectorAll("textarea[minlength]").forEach((ta) => {
+      ta.addEventListener("input", () => {
+        const short = ta.value !== "" && ta.value.trim().length < ta.minLength;
+        ta.setCustomValidity(short ? `Please write at least ${ta.minLength} characters.` : "");
+      });
+    });
 
     const checkGroups = () => {
       let firstInvalid = null;
@@ -186,6 +176,8 @@
     groups.forEach((g) => g.addEventListener("change", () => {
       if (g.classList.contains("is-invalid")) checkGroups();
     }));
+
+    gate();
 
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
@@ -230,6 +222,8 @@
 
         form.reset();
         form.querySelectorAll("textarea[maxlength]").forEach((ta) => ta.dispatchEvent(new Event("input")));
+        gate();
+        if (echo) echo.textContent = `“${data[echo.dataset.echo] || ""}”`;
         if (success) {
           form.hidden = true;
           success.hidden = false;
