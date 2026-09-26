@@ -1,0 +1,35 @@
+{
+  "max": {
+    "hex-outside-tokens": 25,
+    "svg-hex": 0,
+    "tailwind-arbitrary": 0,
+    "tailwind-arbitrary-color": 0,
+    "font-size-literals": 108,
+    "font-size-distinct": 72,
+    "radius-literals": 18,
+    "radius-distinct": 8,
+    "shadow-literals": 6,
+    "shadow-distinct": 6,
+    "spacing-literals": 250,
+    "spacing-distinct": 71,
+    "calibration-hex": 3,
+    "soft-shadow": 0,
+    "gradients": 11,
+    "eyebrow": 10,
+    "headline-accent": 11,
+    "numbered-marker": 62,
+    "arrow-glyph": 56,
+    "middle-dot": 70,
+    "em-dash-label": 18,
+    "mono-label": 0,
+    "scroll-reveal": 89
+  },
+  "allow": {
+    "eyebrow": "brand: kickers and section labels (.kicker, .label: uppercase, .16em tracking), CLAUDE.md Design > Keep and brand.html",
+    "headline-accent": "brand: outline and lime-highlight words in display headlines (.outline, .hl), CLAUDE.md Design > Keep and brand.html",
+    "numbered-marker": "brand: numbered section labels (.label .n, \"01 Our mission\"), CLAUDE.md Design > Keep and brand.html",
+    "arrow-glyph": "brand: the arrow in call-to-action buttons and the circle arrows (the logo is a voice arrow), CLAUDE.md Design > Keep and brand.html",
+    "middle-dot": "brand: middle dots in kickers, meta lines and the footer, CLAUDE.md Design > Keep and brand.html",
+    "scroll-reveal": "brand: .reveal fades up on scroll, with reduced-motion, pause and no-JS failsafe, CLAUDE.md Design > Motion and Keep"
+  }
+}
