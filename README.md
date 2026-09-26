@@ -9,7 +9,7 @@ Live at **https://goactivebucharest.me** (`www` redirects there; checked 20 Sept
 
 | Path | What it is |
 | --- | --- |
-| `index.html` | Our mission (home page) |
+| `index.html` | Home page: what an exchange is, how it works, who can join, a quick idea form, team, FAQ |
 | `ideas.html` | "Tell us your ideas" platform with form |
 | `contact.html` | Contact details and partnership proposal form |
 | `daniel-butnar.html`, `vlad-rusu.html`, `bianca-constantin.html` | Team profiles |
@@ -113,7 +113,7 @@ git push
 | Content Security Policy: scripts, styles and fonts only from this site, forms only to formsubmit.co | meta tag in every page |
 | Referrer policy strict-origin-when-cross-origin | meta tag in every page |
 | No cookies, no analytics, no third-party scripts, self-hosted fonts | whole site |
-| Forms: hidden spam trap, POST fallback without JavaScript (answers never appear in URLs) | ideas.html, contact.html |
+| Forms: hidden spam trap, POST fallback without JavaScript (answers never appear in URLs) | index.html, ideas.html, contact.html |
 | Security contact file (renew the Expires date before 13 September 2027) | .well-known/security.txt |
 
 **If you add a new service** (analytics, maps, embedded video), add its domain to the Content Security Policy in every page and update the Privacy and Cookie policies first.
